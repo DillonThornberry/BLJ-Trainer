@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <h3 id="connect-msg">Gamepad not found</h3>
+
+        <p>
+            Currently pressed:
+            <span id="pressed-button"></span>
+            <br><span >(&#8593 Use this to determine your A and START button)</span>
+            
+        </p>
+    
+        <span></span>
+        <div>
+            <label for="mash-button">A Button:</label>
+            <select id="mash-button"></select>
+        </div>
+
+        <div>
+            <label for="start-button">Start Button:</label>
+            <select id="start-button"></select>
+        </div>
+
+        <div>
+            <label for="mash-speed">Mash Speed:</label>
+            <select id="mash-speed">
+                <option value="400" selected>400 BPM (Beginner)</option>
+                <option value="515">515 BPM (Intermediate)</option>
+                <option value="600">600 BPM (Advanced)</option>
+            </select>
+        </div>
+
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" min="0" max="100" value="50">
+
+        <div>
+        <h3>Average: <span id="average"></span></h3>
+        <h3>Std Dev: <span id="std"></span></h3>
+        <h3>Misses: <span id="miss-count"></span></h3>
+        </div>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
