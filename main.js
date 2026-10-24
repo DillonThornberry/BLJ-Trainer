@@ -74,7 +74,7 @@ function readGamepad(timestamp) {
                 else {
                     stop()
                 }
-                console.log(startButtonActivate.active)
+                //console.log(startButtonActivate.active)
             }
         }
 
@@ -116,7 +116,7 @@ const missAmount = 20
 
 function calculateTimes() {
     const desiredInterval = 1 / (Number(document.getElementById('mash-speed').value)) * 60000
-    console.log(desiredInterval)
+    //console.log(desiredInterval)
     var sum = 0
     var counted = 0
     var diffs = []
@@ -147,7 +147,7 @@ function calculateTimes() {
 
     averageText.innerHTML = `${bpm.toFixed(2)}`
     stdText.innerHTML = `${std_dev.toFixed(2)}`
-    missText.innerHTML = `${missCount} / ${counted}    ${Math.floor((missCount / counted * 100))}% Missed`
+    missText.innerHTML = `${missCount} / ${counted}    (${Math.floor((missCount / counted * 100))}% Missed)`
 
     requestAnimationFrame(calculateTimes)
 }
